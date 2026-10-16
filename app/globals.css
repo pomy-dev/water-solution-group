@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 60% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 60% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 60% 12%;
+    --primary: 203 88% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 209 55% 94%;
+    --secondary-foreground: 215 60% 16%;
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 20% 40%;
+    --accent: 178 82% 43%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 25% 88%;
+    --input: 214 25% 85%;
+    --ring: 203 88% 46%;
+    --radius: 0.9rem;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+  ::selection { @apply bg-water/20 text-navy; }
+}
+
+@layer components {
+  .section-pad { @apply py-20 md:py-28; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.22em] text-water; }
+  .display-title { @apply font-display font-bold tracking-tight text-navy; }
+  .text-gradient {
+    @apply bg-gradient-to-r from-water via-aqua to-water bg-clip-text text-transparent;
+  }
+  .bg-mesh {
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, rgba(20,199,192,0.14), transparent 60%),
+      radial-gradient(50rem 30rem at -10% 20%, rgba(14,143,224,0.16), transparent 60%),
+      linear-gradient(180deg, #F4F9FD 0%, #EAF3FA 100%);
+  }
+  .bg-hero {
+    background:
+      radial-gradient(70rem 40rem at 80% -20%, rgba(20,199,192,0.22), transparent 55%),
+      radial-gradient(60rem 40rem at 0% 110%, rgba(14,143,224,0.28), transparent 55%),
+      linear-gradient(135deg, #071A36 0%, #0B2447 55%, #0E2F5C 100%);
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-water/10;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Pomy/Documents/Backup/africa%20water%20solution/app/template.tsx"],"sourcesContent":["\"use client\";\n\nimport { motion } from \"framer-motion\";\n\nexport default function Template({ children }: { children: React.ReactNode }) {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 14 }}\n      animate={{ opacity: 1, y: 0 }}\n      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}\n    >\n      {children}\n    </motion.div>\n  );\n}\n"],"names":["Template","children","div","initial","opacity","y","animate","transition","duration","ease"],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAASA,SAAS,EAAEC,QAAQ,EAAiC;IAC1E,qBACE,8OAAC,oMAAM,CAACC,GAAG;QACTC,SAAS;YAAEC,SAAS;YAAGC,GAAG;QAAG;QAC7BC,SAAS;YAAEF,SAAS;YAAGC,GAAG;QAAE;QAC5BE,YAAY;YAAEC,UAAU;YAAMC,MAAM;gBAAC;gBAAM;gBAAG;gBAAM;aAAE;QAAC;kBAEtDR;;;;;;AAGP"}}]
+}
